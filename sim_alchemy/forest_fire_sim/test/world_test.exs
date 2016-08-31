@@ -4,7 +4,6 @@ defmodule WorldTest do
 
   alias ForestFireSim.{Forest, World}
 
-  @tag todo: true
   test "starts fires for all initial fires" do
     forest = Forest.from_string("&*")
     test_process = self
@@ -18,7 +17,6 @@ defmodule WorldTest do
     assert_receive {:fire_started, ^xy, ^intensity}
   end
 
-  @tag todo: true
   test "allows another process to peek at locations" do
     forest = Forest.from_string("&*")
     fire_starter = fn _fire -> :ok end
@@ -35,7 +33,6 @@ defmodule WorldTest do
     assert_receive {:debug_location_response, :tree}
   end
 
-  @tag todo: true
   test "can advance a fire" do
     forest = Forest.from_string("&*")
     fire_starter = fn _fire -> :ok end
