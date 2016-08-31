@@ -1,0 +1,11 @@
+{application,turtles,
+             [{registered,[]},
+              {description,"turtles"},
+              {vsn,"0.1.0"},
+              {modules,['Elixir.Turtles','Elixir.Turtles.Clock',
+                        'Elixir.Turtles.Painter','Elixir.Turtles.Turtle',
+                        'Elixir.Turtles.TurtleSupervisor',
+                        'Elixir.Turtles.World',
+                        'Elixir.Turtles.World.Changes']},
+              {applications,[kernel,stdlib,elixir,logger]},
+              {mod,{'Elixir.Turtles',[]}}]}.
